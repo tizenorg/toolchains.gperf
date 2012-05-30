@@ -7,6 +7,7 @@ Group:      Development/Tools
 License:    GPLv2+
 URL:        http://www.gnu.org/software/gperf/
 Source0:    ftp://ftp.gnu.org/pub/gnu/%{name}/%{name}-%{version}.tar.gz
+Source1001: packaging/gperf.manifest 
 
 
 %description
@@ -24,6 +25,7 @@ a single string comparison only.
 
 
 %build
+cp %{SOURCE1001} .
 
 %configure --disable-static
 make %{?jobs:-j%jobs}
@@ -40,6 +42,7 @@ rm -f %{buildroot}%{_datadir}/doc/gperf.html
 
 
 %files
+%manifest gperf.manifest
 %defattr(-,root,root,-)
 %doc NEWS README doc/gperf.html
 %doc %{_mandir}/man1/gperf.1*
