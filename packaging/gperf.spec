@@ -8,6 +8,7 @@ License:    GPLv2+
 URL:        http://www.gnu.org/software/gperf/
 Source0:    ftp://ftp.gnu.org/pub/gnu/%{name}/%{name}-%{version}.tar.gz
 
+
 %description
 GNU gperf is a perfect hash function generator. For a given list of strings, it
 produces a hash function and hash table, in form of C or C++ code, for looking
